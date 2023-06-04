@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Leetcode without using react</title>
+
+  </head>
+  <body>
+    <input type="text" placeholder="email" name="" value=""></input>
+    <input type="text" placeholder="password" name="" value=""></input>
+    <button type="button" name="button">Signin</button>
+
+    <div>
+      <button onclick="renderproblem1()" name="button">1</button>
+      <button onclick="renderproblem2()" name="button">2</button>
+    </div>
+    <div id="problem-statements" style="width: 70vm;">
+    </div>
+
+    <script>
+      const problem = [{
+        title:"201. Bitwise AND of Number Range",
+        difficulty: "Medium",
+        acceptance: "45%";
+      },{
+        title:"202. Happy Number",
+        difficulty: "Easy",
+        acceptance: "80%";
+      },{
+        title:"203. Remove Linked List Elements",
+        difficulty: "Hard",
+        acceptance: "42%";
+      }];
+
+      const problem2 = [{
+        title:"204. Bitwise AND of Number Range",
+        difficulty: "Medium",
+        acceptance: "45%";
+      },{
+        title:"205. Happy Number",
+        difficulty: "Easy",
+        acceptance: "80%";
+      },{
+        title:"206. Remove Linked List Elements",
+        difficulty: "Hard",
+        acceptance: "42%";
+      }];
+
+
+
+      function renderproblem1() {
+        const parentEL = document.getElementsById("problem-statements");
+        parentEL.innerHTML="";
+        renderproblem(problem);
+      }
+
+      function renderproblem2(){
+        const parentEL = document.getElementsById("problem-statements");
+        parentEL.innerHTML="";
+        renderproblem(problem2);
+      }
+
+      function renderproblem(problemProvider){
+        const parentEL = document.getElementById("problem-statements");
+        const tableTag = document.creatElement("table");
+
+        for(int i=0;i<problemProvider.length;i++){
+          const trTag = document.creatElement("tr");
+          const tdEl = document.creatElement("td");
+          tdEl1.innerHTML = problemProvider[i].title;
+          const tdEl2.innerHTML= document.creatElement("td");
+          tdEl2.innerHTML = problemProvider[i].difficulty;
+          const tdEl3.innerHTML= document.creatElement("td");
+          tdEl3.innerHTML = problem[i].acceptance;
+
+          trTag.appendChild(tdEl1);
+          trTag.appendChild(tdEl2);
+          trTag.appendChild(tdEl3);
+          tableTag.appendChild(trTag);
+
+        }
+
+      }
+
+
+    </script>
+  </body>
+</html>
